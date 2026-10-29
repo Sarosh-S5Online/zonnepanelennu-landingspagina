@@ -104,14 +104,14 @@ function compare() {
   <div class="head reveal">
    <span class="eyebrow">Vergelijk</span>
    <h2>Welke thuisbatterij past bij u?</h2>
-   <p class="lead">Twee batterijen, beide inclusief volledige installatie. Wij adviseren vrijblijvend op basis van uw verbruik.</p>
+   <p class="lead">Twee batterijen, beide inclusief btw en volledige installatie. Wij adviseren vrijblijvend op basis van uw verbruik.</p>
   </div>
   <div class="vgl-wrap reveal">
    <table class="vgl-table">
     <thead><tr><th scope="col"><span class="sr">Kenmerk</span></th><th scope="col">${a.short}</th><th scope="col">${b.short}</th></tr></thead>
     <tbody>
 ${rows.map(([label, k]) => `     <tr><th scope="row">${label}</th><td data-label="${a.short}">${a.compare[k]}</td><td data-label="${b.short}">${b.compare[k]}</td></tr>`).join('\n')}
-     <tr class="vgl-price"><th scope="row">Prijs inclusief installatie</th><td data-label="${a.short}">${priceCell(a)}</td><td data-label="${b.short}">${priceCell(b)}</td></tr>
+     <tr class="vgl-price"><th scope="row">Prijs inclusief btw en installatie</th><td data-label="${a.short}">${priceCell(a)}</td><td data-label="${b.short}">${priceCell(b)}</td></tr>
      <tr class="vgl-cta"><th scope="row"><span class="sr">Aanvragen</span></th><td data-label="${a.short}"><a class="btn btn-amber" href="#formulier" data-battery="${a.id}"><span data-offer="live">${texts.buttonLive}</span><span data-offer="expired">${texts.buttonExpired}</span></a></td><td data-label="${b.short}"><a class="btn btn-amber" href="#formulier" data-battery="${b.id}"><span data-offer="live">${texts.buttonLive}</span><span data-offer="expired">${texts.buttonExpired}</span></a></td></tr>
     </tbody>
    </table>
@@ -122,7 +122,7 @@ ${rows.map(([label, k]) => `     <tr><th scope="row">${label}</th><td data-label
 
 const calcOffer = () => {
   const alpha = products.find((p) => p.id === 'alpha') || products[products.length - 1];
-  return `<p class="calc-offer" id="co-offer" data-offer="live">Een concreet voorbeeld: de ${alpha.name} kost in ${offer.monthText} <b>${eur(alpha.newPrice)}</b>, inclusief volledige installatie.</p>`;
+  return `<p class="calc-offer" id="co-offer" data-offer="live">Een concreet voorbeeld: de ${alpha.name} kost in ${offer.monthText} <b>${eur(alpha.newPrice)}</b>, inclusief btw en volledige installatie.</p>`;
 };
 
 const finalCta = () => `<h2><span data-offer="live">Pak de ${offer.name.toLowerCase()} mee</span><span data-offer="expired">Vraag uw gratis advies aan</span></h2>
@@ -143,7 +143,7 @@ const clientCfg = {
   products: Object.fromEntries(
     products.map((p) => [p.id, { name: p.name, price: eur(p.newPrice) }]),
   ),
-  note: `Ik wil graag de ${offer.name.toLowerCase()} aanvragen: {name}, inclusief volledige installatie, voor {price}.`,
+  note: `Ik wil graag de ${offer.name.toLowerCase()} aanvragen: {name}, inclusief btw en volledige installatie, voor {price}.`,
 };
 const stateScript = `<script>window.__OFFER__=${JSON.stringify(clientCfg)};(function(){try{if(Date.now()>Date.parse(window.__OFFER__.end))document.documentElement.setAttribute('data-offer','expired')}catch(e){}})();</script>`;
 

@@ -30,9 +30,9 @@ export default {
 
   texts: {
     sub: 'Kies de batterij die bij uw verbruik past. Wij regelen alles: advies, levering, installatie en aansluiting. U hoeft zelf niets te doen.',
-    inclusive: 'Inclusief volledige installatie van A tot Z',
+    inclusive: 'Inclusief btw en volledige installatie van A tot Z',
     promise: 'Goedkoper krijgt u het niet: volledig geïnstalleerd van A tot Z, zonder verborgen kosten.',
-    promiseSmall: 'Levering, montage, aansluiting en ingebruikname inbegrepen.',
+    promiseSmall: 'Alle prijzen zijn inclusief btw. Levering, montage, aansluiting en ingebruikname inbegrepen.',
     unsure: 'Twijfelt u welke past? Wij adviseren vrijblijvend op basis van uw verbruik.',
     buttonLive: 'Vraag deze aanbieding aan',
     buttonExpired: 'Vraag advies aan',
@@ -67,7 +67,7 @@ export default {
       alt: 'AlphaESS thuisbatterij 18,6 kWh',
       image: '/assets/img/alphaess-thuisbatterij-18-6-kwh.webp',
       imageSize: [640, 480],
-      oldPrice: 8000,
+      oldPrice: 8500,
       newPrice: 7500,
       specs: ['18,6 kWh opslag', 'LFP-batterij', '5 jaar garantie op de installatie'],
       fit: 'Grote opslag, voor gezinnen met hoger verbruik of een warmtepomp of laadpaal.',
@@ -82,10 +82,10 @@ export default {
   ],
 
   seo: {
-    titleLive: 'Thuisbatterij incl. installatie vanaf {from} | Novemberaanbieding | ZonnepanelenNu',
+    titleLive: 'Thuisbatterij incl. btw en installatie vanaf {from} | Novemberaanbieding | ZonnepanelenNu',
     descriptionLive:
-      'Novemberaanbieding: thuisbatterij inclusief volledige installatie. Anker SOLIX 7 kWh voor {anker} of AlphaESS 18,6 kWh voor {alpha}. Vraag gratis advies aan.',
-    titleExpired: 'Thuisbatterij incl. volledige installatie | ZonnepanelenNu',
+      'Novemberaanbieding: thuisbatterij inclusief btw en volledige installatie. Anker SOLIX 7 kWh voor {anker} of AlphaESS 18,6 kWh voor {alpha}. Vraag gratis advies aan.',
+    titleExpired: 'Thuisbatterij incl. btw en volledige installatie | ZonnepanelenNu',
     descriptionExpired:
       'Sla uw zonnestroom op met een thuisbatterij, volledig geïnstalleerd van A tot Z. Eerlijk advies aan huis door ons eigen team. Vraag gratis advies aan.',
   },
