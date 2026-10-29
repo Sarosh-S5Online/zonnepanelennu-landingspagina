@@ -77,7 +77,11 @@ ${products.map(card).join('\n')}
   ${promiseBar()}
   <div class="hero-help">
    <p>${texts.unsure}</p>
-   <a class="btn btn-call" href="tel:${site.phoneHref}">${ICON.phone}Bel ${site.phoneLabel}</a>
+   <form class="pc pc-lp" data-lp-pc action="#formulier" novalidate>
+    <label class="sr" for="lp-pc">Postcode en huisnummer</label>
+    <input id="lp-pc" aria-label="Postcode en huisnummer" placeholder="Postcode + huisnummer" autocomplete="postal-code">
+    <button class="btn btn-amber" type="submit">Vraag gratis advies aan</button>
+   </form>
   </div>
   <div class="hero-badges">
    <b><span class="stars">★★★★★</span>&nbsp;4,8 op Google</b>

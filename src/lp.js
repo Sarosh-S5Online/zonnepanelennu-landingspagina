@@ -24,6 +24,15 @@
   });
   // ?batterij=anker of ?batterij=alpha kiest de batterij vooraf
   try{var q=new URLSearchParams(location.search).get('batterij'); if(q) choose(q);}catch(e){}
+  // postcodeveld in de hero: waarde meenemen naar het formulier en daarheen springen
+  var pcForm=document.querySelector('[data-lp-pc]');
+  if(pcForm) pcForm.addEventListener('submit',function(e){
+    e.preventDefault();
+    var v=(document.getElementById('lp-pc')||{}).value||'';
+    var pc=document.getElementById('f-pc')||document.getElementById('form-field-postcode');
+    if(pc && v && !pc.value){pc.value=v;pc.dispatchEvent(new Event('input',{bubbles:true}));}
+    toForm();
+  });
   var form=document.getElementById('lform');
   if(!form) return;
   form.addEventListener('submit',function(e){
